@@ -38,7 +38,11 @@ class Post
 
     // function static untuk mengembalikan nilai data dari $posts_blog di atas
     public static function all(){
-        return self::$posts_blog;
+        // return self::$posts_blog;
+        // PENERAPAN COLLECTION
+        // jadikan dia collection dengan menambah collect
+        return collect(self::$posts_blog);
+    
     }
 
 
@@ -46,22 +50,28 @@ class Post
     public static function find($slug){
 
         // ambil dulu semua postingan
-        $posts = self::$posts_blog;
+        // $posts = self::$posts_blog;
+        // kita ga perlu menuliskan code ini ($posts = self::$posts_blog;)
+        // kita ambil data post menggunakan function all yang telah kita buat, sekaligus untuk mengambil collection yang telah dibikin
+        // pakai static ya soalnya dia function static, kalo yang atas pake self karena kita mereturn static property, jadi static::(untuk static function) dan self::(untuk static property/vairable)
+        $post = static::all();
         // tempat untuk menampung hasil pencarian postingan (single post)
-        $post = []; 
+        // $post = []; 
         // kita looping data nya
-        foreach ($posts as $p){
+        // foreach ($posts as $p){
             // kita cari postingan sesuai dengan yang di pilih user menggunakan slug
-            if ($p["slug"] === $slug ){
-                $post = $p;
-            }
-        }
+        //     if ($p["slug"] === $slug ){
+        //         $post = $p;
+        //     }
+        // }
 
         // kembalikan hasil nya ke temoat penampungan
-        return $post;
+        // ganti logic diatas dengan memanfaatkan function dari collection yaitu firstwhere
+        return $post->firstWhere('slug', $slug);
 
 
     }
 }
+
 
 
