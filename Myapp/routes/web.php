@@ -85,6 +85,7 @@ Route::get('/blog', [PostController::class, 'index']);
 
 // });
 
+// Route detail artikel
 Route::get('/posts-{slug}', [PostController::class, 'show']);
 
 
