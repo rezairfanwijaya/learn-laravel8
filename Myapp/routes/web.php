@@ -1,5 +1,8 @@
 <?php
 
+// include controllers 
+use App\Http\Controllers\PostController;
+// include class
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 // import class use dari models dengan cari manual atau bisa klik kanan import all class (pakai extention php namespace resolver) tetapi kita harus memanggil class nya dulu (saya memanggila class nya di routes blog pada index posts)
@@ -16,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// route landing page
+// route history
 Route::get('/history', function () {
     // return ('hallo reza');
     $nama = "Reza";
@@ -46,19 +49,24 @@ Route::get('/about', function () {
     ]);
 });
 
-// route blog
-Route::get('/blog', function () {
+// route blog 
+// rout ini saya pindahkan return nya ke controllers dan saya ganti cara penulisanny sesuai dengan carap penulisan menggunakan controllers
+// Route::get('/blog', function () {
 
-    return view('blog', [
-        'logo' => 'logo.png',
-        'title' => 'Post',
-        'posts'=> Post::all()
-    ]);
-});
+//     return view('blog', [
+//         'logo' => 'logo.png',
+//         'title' => 'Post',
+//         'posts'=> Post::all()
+//     ]);
+// });
+
+// rout blog menggunakan controllers
+Route::get('/blog', [PostController::class, 'index']);
 
 
 // route untuk detail artikel
-Route::get('/posts-{slug}', function($slug){
+// route ini penulisannya akan saya ganti sesuai dengan controllers yang saya gunakan
+// Route::get('/posts-{slug}', function($slug){
 
     // ambil slug nya
     // $new_post = [];
@@ -68,14 +76,16 @@ Route::get('/posts-{slug}', function($slug){
     //     }
     // }
 
+// kode ini akan saya pindahkan ke controller dengan function show
+    // return view('post', [
+    //     'logo' => 'logo.png',
+    //     'title' => 'Post',
+    //     'post' => Post::find($slug)
+    // ]);
 
-    return view('post', [
-        'logo' => 'logo.png',
-        'title' => 'Post',
-        'post' => Post::find($slug)
-    ]);
+// });
 
-});
+Route::get('/posts-{slug}', [PostController::class, 'show']);
 
 
 // route note
