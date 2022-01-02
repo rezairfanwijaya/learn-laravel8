@@ -130,6 +130,21 @@
                         Migration database itu berfungsi untuk membuat dan mengisi tabel tanpa harus menggunakan client side seperti phpmyadmin dengan syarat membuat databasenya terlebih dahulu di file .env dan ubah settingan sesuai dengan database yang digunakan
                         <img src="img/env.png" alt="env" style="width: 50rem">
                     </p>
+                    <br>
+                    <p class="content-list"><span>Melakukan migration</span><br>
+                    Untuk melakukan migration kita cukup menggunakan perintah <span>php artisan migrate</span>. Perlu diingat pada migraton database ada dua method penting yaitu "up" dan "down". Up berguna untuk melakukan upload table migration ke database, sedangkan down digunakan untuk menarik kembali table yang sudah kita push ke database.Sedangkan untuk melakukan keduanya kita bisa menggunakan <span>php artisan migrate:fresh</span>
+                </p>
+                </div>
+
+                <div class="folder konten" style="margin-bottom: 50px;">
+                    <li>Menambah data ke table hasil Migration Database <span>(Masih dalam pemikiran)</span>
+                    </li>
+                    <p class="content-list">
+                       Unutk menambah data kita bisa langsung ke phpmyadmin atau semacam nya. Namun laravel menyediakan fitur bagus yang namanya <span>tinker</span>. Cara menggunakannya cukup ketikan perintah <span>php artisan tinker</span>
+                        <img src="img/env.png" alt="env" style="width: 50rem">
+                    </p>
+                    
+                </p>
                 </div>
 
                 <div class="folder konten" style="margin-bottom: 50px;">
