@@ -123,6 +123,27 @@
                         <img src="img/ternarynavitem.png" alt="ternary" style="width: 50rem">
                     </p>
                 </div>
+
+                <div class="folder konten" style="margin-bottom: 50px;">
+                    <li>Migration Database</li>
+                    <p class="content-list">
+                        Migration database itu berfungsi untuk membuat dan mengisi tabel tanpa harus menggunakan client side seperti phpmyadmin dengan syarat membuat databasenya terlebih dahulu di file .env dan ubah settingan sesuai dengan database yang digunakan
+                        <img src="img/env.png" alt="env" style="width: 50rem">
+                    </p>
+                </div>
+
+                <div class="folder konten" style="margin-bottom: 50px;">
+                    <li>Error Migration Database</li>
+                    <p class="content-list">
+                        Error ini bisa terjadi karena belum terdefinisikannya nama database pada file .env atau ada kesalahan pada file php.ini <br>
+                        itu bisa solved dengan cara masuk ke file php (C:\programfiles\PHP) lalu edit file php.ini pada bagian <span>;extension=pdo_mysql</span> hapus tanda <span>;</span> sehingga menjadi <span>extension=pdo_mysql</span>
+                        <img src="img/errormigration.png" alt="error" style="width: 50rem">
+                        <p>file php.ini sebelum di perbaiki</p>
+                        <img src="img/phpinibefore.png" alt="before">
+                        <p>file php.ini setelah di perbaiki</p>
+                        <img src="img/phpiniafter.png" alt="before">
+                    </p>
+                </div>
             </ol>
         </div>
     </div>
