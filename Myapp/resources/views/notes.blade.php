@@ -137,11 +137,11 @@
                 </div>
 
                 <div class="folder konten" style="margin-bottom: 50px;">
-                    <li>Menambah data ke table hasil Migration Database <span>(Masih dalam pemikiran)</span>
+                    <li>Menambah data ke table hasil Migration 
                     </li>
                     <p class="content-list">
-                       Unutk menambah data kita bisa langsung ke phpmyadmin atau semacam nya. Namun laravel menyediakan fitur bagus yang namanya <span>tinker</span>. Cara menggunakannya cukup ketikan perintah <span>php artisan tinker</span>
-                        <img src="img/env.png" alt="env" style="width: 50rem">
+                       Untuk menambah data kita bisa langsung ke phpmyadmin atau semacam nya. Namun laravel menyediakan fitur bagus yang namanya <span>tinker</span>. Cara menggunakannya cukup ketikan perintah <span>php artisan tinker</span>. Dengan cara membuta objek dari class user yang sudah dibuat di models.
+                        <img src="img/tinker.png" alt="env" style="width: 50rem">
                     </p>
                     
                 </p>
