@@ -159,6 +159,41 @@
                         <img src="img/phpiniafter.png" alt="before">
                     </p>
                 </div>
+
+                <div class="folder konten" style="margin-bottom: 50px;">
+                    <li>Membuat Models dan Migration Secara Bersamaan</li>
+                    <p class="content-list">
+                        Membuat models dan migration bisa dilakukan bersamaan menggunakan terminal dengan command <span>php artisan make:model nama_model -m</span>
+                    </p>
+                    <img src="img/makeModelMigration.png" alt="makeModelMigration" style="width: 50rem">
+                </div>
+
+                <div class="folder konten" style="margin-bottom: 50px;">
+                    <li>Memilih Data Reqord Tertentu Secara Keseluruhan</li>
+                    <p class="content-list">
+                        Memilih data bisa dilakukan di tinker dan masukan query <span>Class::pluck('kolom_target')</span>
+                    </p>
+                    <img src="img/selectGroupKolom.png" alt="selectGroupKolom" style="width: 50rem">
+                </div>
+
+                <div class="folder konten" style="margin-bottom: 50px;">
+                    <li>Memilih Data Reqord Tertentu Secara Tunggal</li>
+                    <p class="content-list">
+                        Memilih data secara tunggal bisa dilakukan di tinker dan masukan query <span>Class::find('id')</span>. Target harus menggunakan id
+                    </p>
+                    <img src="img/findID.png" alt="findID" style="width: 50rem">
+                </div>
+
+                <div class="folder konten" style="margin-bottom: 50px;">
+                    <li>Akses Data Array Dari Database</li>
+                    <p class="content-list">
+                        Mengakses data array dari database bisa menggunakan property(index/nama kolom)) dari database
+                    </p>
+                    <p>Sebelum</p>
+                    <img src="img/beforeAtribut.png" alt="beforeAtribut" style="width: 50rem" class="mb-2">
+                    <p>Sesudah</p>
+                    <img src="img/afterAtribut.png" alt="afterAtribut" style="width: 50rem" class="mb-2">
+                </div>
             </ol>
         </div>
     </div>

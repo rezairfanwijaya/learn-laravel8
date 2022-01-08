@@ -1,0 +1,12 @@
+-bikin models + migration sekaligus (php artisan make:models -m Post)
+-add data
+-migraton
+-query (all) -> class::all() / object::all()
+-query (record tertentu) -> class::pluck('nama tabel')
+-query (record berdasar id) -> class::find(id)
+-notasi object pada pengaksesan array data dari database
+-no escaping -> membiarkan tag html dijalankan dari inputan user dengan syntax {!!   !!}
+-escaping -> tidak akan menjalankan tag html dari inputan user dengan syntax {{    }}
+-add data ke table ada cara lain lebih cepat selain cari instace object yiatu mass assignment yang mana memiliki
+syntax  namaClass::create(['nama_kolom => 'isi','nama_kolom=> 'isi']) lalu copy kan ke tinker dengan syarat di class modelnya 
+kita menambahkan visibility $fillable = ['nama_kolom yang boleh diisi', 'nama_kolom yang boleh diisi'] atau biar lebih mudah pakai visibility $guarded= ['nama_kolom']
