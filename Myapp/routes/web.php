@@ -86,7 +86,9 @@ Route::get('/blog', [PostController::class, 'index']);
 // });
 
 // Route detail artikel
+// post:slug berarti kita mengambil slug dari post yang kita klik
 Route::get('/posts-{post:slug}', [PostController::class, 'show']);
+
 
 
 // route note

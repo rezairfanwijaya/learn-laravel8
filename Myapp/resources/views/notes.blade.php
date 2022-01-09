@@ -208,6 +208,20 @@
                     <p>Syarat</p>
                     <img src="img/syaratMassAsignment.png" alt="syaratMassAsignment" style="width: 50rem" class="mb-2">
                 </div>
+
+                <div class="folder konten" style="margin-bottom: 50px;">
+                    <li>Route Model Binding</li>
+                    <p class="content-list">
+                        Route Model Binding ini digunakan saat kita mulai masuk ke detail suatu item, jadi dengan mengguakan Route Model Binding kita tidak usah meng-query ke database tentang find dari suatu item. <br>
+                        Yang harus diperhatikan
+                    </p>
+                    <p>Tambahakan kolom <span>slug</span> di tabel dan harus uniq (dalam contoh ini saya menggunakan tabel posts)</p>
+                    <img src="img/RMBMigrationTable.png" alt="RMBMigrationTable" style="width: 50rem" class="mb-2">
+                    <p>Ubah Route</p>
+                    <img src="img/RMBRoute.png" alt="RMBRoute" style="width: 50rem" class="mb-2">
+                    <p>Ubah Controllers</p>
+                    <img src="img/RMBControlers.png" alt="RMBControlers" style="width: 50rem" class="mb-2">
+                </div>
             </ol>
         </div>
     </div>

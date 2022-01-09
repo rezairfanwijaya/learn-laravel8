@@ -17,10 +17,12 @@ class PostController extends Controller
         ]);
     }
 
+    // ikat post kedalam Atribut class Post
     public function show (Post $post){
         return view('post', [
             'logo' => 'logo.png',
             'title' => 'Post',
+            // post sudah otomatis sesuai yang kita klik,tanpa menggunakan query untuk find
             'post' => $post
         ]);
     }
