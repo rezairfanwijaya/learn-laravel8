@@ -20,8 +20,10 @@ class CreatePostsTable extends Migration
              */
             $table->id();
             $table->string('judul');
+            $table->string('slug')->unique();
             $table->text('partial');
             $table->text('full');
+            $table->string('penulis');
             $table->timestamp('publish_at')->nullable();
             $table->timestamps();
             // jika sudah siap, tinggal lakukan migration

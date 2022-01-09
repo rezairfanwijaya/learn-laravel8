@@ -17,11 +17,11 @@ class PostController extends Controller
         ]);
     }
 
-    public function show ($id){
+    public function show (Post $post){
         return view('post', [
             'logo' => 'logo.png',
             'title' => 'Post',
-            'post' => Post::find($id)
+            'post' => $post
         ]);
     }
 }

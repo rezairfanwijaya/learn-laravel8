@@ -86,7 +86,7 @@ Route::get('/blog', [PostController::class, 'index']);
 // });
 
 // Route detail artikel
-Route::get('/posts-{id}', [PostController::class, 'show']);
+Route::get('/posts-{post:slug}', [PostController::class, 'show']);
 
 
 // route note
