@@ -194,8 +194,21 @@
                     <p>Sesudah</p>
                     <img src="img/afterAtribut.png" alt="afterAtribut" style="width: 50rem" class="mb-2">
                 </div>
+
+                <div class="folder konten" style="margin-bottom: 50px;">
+                    <li>Menambahakan data ke Database menggunakan tiker <span>lebih cepat</span></li>
+                    <p class="content-list">
+                        Menambah data disini bisa menggunakan perintah <span>Class::create(['nama_kolom' => 'isi'])</span>. Cara ini dinamakan <span>Mass Asignment</span>. Dengan syarat di class yang akan kita create kolom di database harus sudah bisa di isi. <br>
+                        Bisa memggunakan <span> visibility $fillable = ['nama_kolom yang boleh diisi', 'nama_kolom yang boleh diisi']</span> atau biar lebih mudah pakai <span>visibility $guarded= ['nama_kolom']</span>
+                    </p>
+                    <p>Sebelum</p>
+                    <img src="img/tinker.png" alt="tinker" style="width: 50rem" class="mb-2">
+                    <p>Sesudah</p>
+                    <img src="img/addSimple.png" alt="addSimple" style="width: 50rem" class="mb-2">
+                    <p>Syarat</p>
+                    <img src="img/syaratMassAsignment.png" alt="syaratMassAsignment" style="width: 50rem" class="mb-2">
+                </div>
             </ol>
         </div>
     </div>
 @endsection
-
