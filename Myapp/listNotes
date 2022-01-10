@@ -11,7 +11,7 @@
 syntax  namaClass::create(['nama_kolom => 'isi','nama_kolom=> 'isi']) lalu copy kan ke tinker dengan syarat di class modelnya 
 kita menambahkan visibility $fillable = ['nama_kolom yang boleh diisi', 'nama_kolom yang boleh diisi'] atau biar lebih mudah pakai visibility $guarded= ['nama_kolom']
 
-########### ROUTE MODEL BINDINGS ##########
+##################################### ROUTE MODEL BINDINGS #####################################
 dipakai pada saat melihat detail tertentu
 file yang di ubah berada di web.php (route) sama controlers
 di web.php = Route::get('/posts-{post:slug}', [PostController::class, 'show']);
@@ -35,6 +35,27 @@ Post::create([
     'partial' => 'Lorem ipsum dolor sit, amet consectetur adipisicing pertama',
     'full' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore accusamus ullam ipsam mollitia voluptate voluptas qui repellendus consequatur laudantium totam reprehenderit expedita temporibus, cupiditate alias reiciendis autem, ipsum eligendi dolores magnam illum adipisci assumenda! Ipsa quod iste minus harum, illum, aperiam ab rem illo quo dolor provident corporis cum, quos neque! Esse tempore atque iste recusandae ipsam vel eligendi ipsa, corrupti illo amet laboriosam suscipit quas corporis deleniti omnis sequi, ut ab enim et saepe quaerat. Pariatur in culpa, mollitia nesciunt et, accusamus accusantium autem cumque, numquam cupiditate voluptatem veniam odit aliquid dolores deleniti libero iusto excepturi voluptatum dolor? Modi corrupti, fuga facere eveniet omnis amet, ducimus neque suscipit cumque, dicta provident totam explicabo odio sint. Doloremque praesentium quibusdam rem.',
     'penulis' => 'Andreas'
-    
-    
     ])
+
+
+
+    ##################################### POST CATEGORY & ELOQUENT RELATIONSHIP (JOIN TABEL) #####################################
+    Category::Create([
+        'nama'=>'Personal',
+        'slug'=>'personal'
+    ])
+
+    category 1 = programming
+category 2 = web design
+category 3 = personal
+
+
+    Post::Create([
+        'judul' => 'Postingan Ketiga',
+        'slug' => 'postingan-ketiga',
+        'partial' =>  'Lorem ipsum dolor sit, amet consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore accusamus ullam ipsam mollitia voluptate voluptas qui repellendus consequatur laudantium totam reprehenderit expedita temporibus, cupiditate.',
+        'full' => '<p>Lorem ipsum dolor sit, amet consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore accusamus ullam ipsam mollitia voluptate voluptas qui repellendus consequatur laudantium totam reprehenderit expedita temporibus, cupiditate.</p><p>alias reiciendis autem, ipsum eligendi dolores magnam illum adipisci assumenda! Ipsa quod iste minus harum, illum, aperiam ab rem illo quo dolor provident corporis cum, quos neque! Esse tempore atque iste recusandae ipsam vel eligendi ipsa, corrupti illoamet laboriosam suscipit quas corporis deleniti omnis sequi, ut ab enim et saepe quaerat. Pariatur in culpa, mollitia nesciunt et.</p><p> accusamus accusantium autem cumque, numquam cupiditate voluptatem veniamodit aliquid dolores deleniti libero iusto excepturi voluptatum dolor? Modi corrupti, fuga facere eveniet omnis amet, ducimus neque suscipit cumque, dicta provident totam explicabo odio sint. Doloremquepraesentiumquibusdam rem.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem soluta eligendi officiis cupiditate, adipisci, facere quis neque non commodi, illo dignissimos exercitationem quos veniam voluptas.</p><p> enim assumenda sequi impedit ut sed. Nobis, velit alias reprehenderit neque, eum vel quasi beatae ea esse ab itaque nam quod sit, odio consectetur laborum necessitatibus aut ratione dolorum quae modi.</p>',
+        'penulis' => 'Andreas',
+        'category_id' => '2'
+    ])
+

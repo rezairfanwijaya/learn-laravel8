@@ -4,16 +4,14 @@
     p,
     h2,
     h5 {
-        color: white
+        color: #fff;
     }
 
 </style>
-
-{{-- untuk vardumb --}}
-{{-- @dd($posts) --}}
 @section('konten')
 
-    <a href="/categories">Lihat Semua Kategori</a>
+    <h2 class="mb-5">Kategori {{ $category }}</h2>
+
 
     @foreach ($posts as $post)
         <article class="mb-5">
@@ -29,4 +27,7 @@
             </p>
         </article>
     @endforeach
+
+    <a href="/blog">Back</a>
+
 @endsection

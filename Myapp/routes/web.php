@@ -2,8 +2,10 @@
 
 // include controllers 
 use App\Http\Controllers\PostController;
+use App\Models\Category;
 // include class
 use App\Models\Post;
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 // import class use dari models dengan cari manual atau bisa klik kanan import all class (pakai extention php namespace resolver) tetapi kita harus memanggil class nya dulu (saya memanggila class nya di routes blog pada index posts)
 
@@ -127,8 +129,25 @@ Route::get('/profile', function () {
 
 });
 
-// Route::get('/test', function () {
-    
-//     return view('1.2.3.file');
+// Route unutk category
+Route::get('/categories-{category:slug}', function(Category $category){
+    return view('category', [
+        'title' => $category->nama,
+        'posts' => $category->post,
+        'logo' => 'logo.png',
+        'category' =>$category->nama
+    ]);
 
-// });
+});
+
+// Route untuk daftar list kategori
+Route::get('/categories', function(){
+     
+    return view('categories',[
+        'title' => 'Categories',
+        'logo' => 'logo.png',
+        'categories' => Category::all()
+    ]);
+
+});
+

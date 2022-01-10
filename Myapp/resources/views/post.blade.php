@@ -8,10 +8,10 @@
     }
 
 </style>
-
 @section('konten')
+
     <h2>{{ $post->judul }}</h2>
-    {{-- <h5>by: {{ $post["author"] }}</h5> --}}
+    <p>Oleh {{ $post->penulis }} dalam <a href="/categories-{{ $post->category->slug }}">{{ $post->category->nama }}</a></p>
     <div class="text-white">
         {!! $post->full !!}
     </div>

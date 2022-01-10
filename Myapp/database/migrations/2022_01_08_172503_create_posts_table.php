@@ -24,6 +24,7 @@ class CreatePostsTable extends Migration
             $table->text('partial');
             $table->text('full');
             $table->string('penulis');
+            $table->foreignId('category_id');
             $table->timestamp('publish_at')->nullable();
             $table->timestamps();
             // jika sudah siap, tinggal lakukan migration
